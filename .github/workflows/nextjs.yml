@@ -78,7 +78,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ${{ runner.temp }}/artifact.tar
+          path: ${{ runner.temp }}
           retention-days: ${{ inputs.retention-days }}
           if-no-files-found: error
 
