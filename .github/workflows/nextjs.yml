@@ -78,7 +78,9 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./out
+          path: _site/artifact.tar
+          retention-days: ${{ inputs.retention-days }}
+          if-no-files-found: error
 
   # Deployment job
   deploy:
